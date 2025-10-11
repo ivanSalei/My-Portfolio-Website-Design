@@ -2,147 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles/style.css">
-    <!-- JS -->
-    <script src="./scripts/scripts.js" type="module" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- JS -->
+  <script src="./scripts/scripts.js" type="module" defer></script>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <a class="logo" href="index.html">
-            <i class="fa-solid fa-code"></i>
-            <span class="logo-text">Ivan Salei</span>
-        </a>
+  <!-- HEADER -->
+  <header>
+    <a class="logo" href="index.html">
+      <i class="fa-solid fa-code"></i>
+      <span class="logo-text">Ivan Salei</span>
+    </a>
 
-        <nav>
-            <div class="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <ul>
-                <li><a href="index.html" data-lang-uk="Головна" data-lang-en="Home">Home</a></li>
-                <li><a href="about.html" data-lang-uk="Про мене" data-lang-en="About">About</a></li>
-                <li><a href="projects.html" data-lang-uk="Проєкти" data-lang-en="Projects">Projects</a></li>
-                <li><a href="skills.html" data-lang-uk="Навички" data-lang-en="Skills">Skills</a></li>
-                <li><a href="contact.html" data-lang-uk="Контакт" data-lang-en="Contact">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul>
+        <li><a href="index.html" data-lang-uk="Головна" data-lang-en="Home">Home</a></li>
+        <li><a href="about.html" data-lang-uk="Про мене" data-lang-en="About">About</a></li>
+        <li><a href="projects.html" data-lang-uk="Проєкти" data-lang-en="Projects">Projects</a></li>
+        <li><a href="skills.html" data-lang-uk="Навички" data-lang-en="Skills">Skills</a></li>
+        <li><a href="contact.html" data-lang-uk="Контакт" data-lang-en="Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Language toggle -->
+    <div class="lang-toggle" id="lang-toggle">
+      <button id="uk-btn">UK</button>
+      <button id="en-btn">EN</button>
+    </div>
+    <!-- Theme toggle -->
+    <div class="theme-toggle">
+      <i class="fas fa-sun"></i>
+    </div>
+  </header>
 
-        <!-- Language toggle -->
-        <div class="lang-toggle" id="lang-toggle">
-            <button id="uk-btn">UK</button>
-            <button id="en-btn">EN</button>
+  <!-- MAIN CONTENT -->
+  <main class="about-section">
+    <!-- ABOUT / HERO SECTION -->
+    <section class="hero">
+      <div class="content">
+        <h1 data-lang-uk="Про мене" data-lang-en="About Me">About Me</h1>
+        <h2 data-lang-uk="Веб-розробник з Закарпаття" data-lang-en="Web Developer from Zakarpattia">
+          Web Developer from Zakarpattia
+        </h2>
+        <p data-lang-uk="Привіт! Мене звати Іван Салей. Я початківець веб-розробник, який захоплюється створенням сучасних, адаптивних і візуально приємних сайтів. Мені подобається перетворювати ідеї на функціональні вебсторінки з чистим кодом і продуманою структурою. Зараз я вдосконалюю свої навички у фронтенд-розробці та прагну стати професіоналом, який створює інтерфейси, що справді приносять користь людям."
+   data-lang-en="Hi! My name is Ivan Salej. I’m a beginner web developer passionate about creating modern, responsive, and visually appealing websites. I enjoy turning ideas into functional web pages with clean code and well-thought-out structure. Currently, I’m improving my front-end development skills and striving to become a professional who builds interfaces that truly help people.">
+  Привіт! Мене звати Іван Салей. Я початківець веб-розробник, який захоплюється створенням сучасних, адаптивних і візуально приємних сайтів. Мені подобається перетворювати ідеї на функціональні вебсторінки з чистим кодом і продуманою структурою. Зараз я вдосконалюю свої навички у фронтенд-розробці та прагну стати професіоналом, який створює інтерфейси, що справді приносять користь людям.
+</p>
+        <p data-lang-uk="Мої навички охоплюють основи HTML, CSS та JavaScript — технології, з яких починається будь-який сучасний вебсайт. Я вмію працювати зі структурою сторінок, стилізацією елементів і створенням базової інтерактивності. Крім цього, користуюсь GitHub для збереження та публікації своїх проєктів. Моя мета — постійно розвиватися, вивчати нові інструменти та вдосконалювати якість свого коду."
+   data-lang-en="My skills include the basics of HTML, CSS, and JavaScript — the core technologies behind every modern website. I can structure pages, style elements, and add basic interactivity. I also use GitHub to store and publish my projects. My goal is to keep learning new tools and improving the quality of my code.">
+  Мої навички охоплюють основи HTML, CSS та JavaScript — технології, з яких починається будь-який сучасний вебсайт. Я вмію працювати зі структурою сторінок, стилізацією елементів і створенням базової інтерактивності. Крім цього, користуюсь GitHub для збереження та публікації своїх проєктів. Моя мета — постійно розвиватися, вивчати нові інструменти та вдосконалювати якість свого коду.
+</p>
+        <div class="cta-buttons">
+          <a href="projects.html" class="btn btn-primary" data-lang-uk="Мої проєкти" data-lang-en="My Projects">
+            <i class="fa-solid fa-laptop-code"></i> My Projects
+          </a>
+          <a href="contact.html" class="btn btn-secondary" data-lang-uk="Зв’язатися зі мною" data-lang-en="Contact Me">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
         </div>
+      </div>
 
-        <!-- Theme toggle -->
-        <div class="theme-toggle">
-            <i class="fas fa-sun"></i>
+      <div class="profile-container">
+        <div class="border-container">
+          <div class="border-outer"></div>
+          <div class="border-middle"></div>
+          <div class="border-inner"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
         </div>
-    </header>
+        <img src="images/profile.png" alt="Ivan Salej" class="profile-img">
+      </div>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="about-section">
-        <!-- ABOUT / HERO SECTION -->
-        <section class="hero">
-            <div class="content">
-                <h1 data-lang-uk="Про мене" data-lang-en="About Me">About Me</h1>
-                <h2 data-lang-uk="Веб-розробник з Закарпаття" data-lang-en="Web Developer from Zakarpattia">
-                    Web Developer from Zakarpattia
-                </h2>
-                <p data-lang-uk="Привіт! Мене звати <strong>Ivan Salej</strong>, я початківець веб-розробник, захоплений створенням сучасних та стильних сайтів. Моє головне завдання – поєднувати чистий код з привабливим дизайном для комфортного користувацького досвіду."
-                   data-lang-en="Hi! My name is <strong>Ivan Salej</strong>, I am a beginner web developer passionate about creating modern and stylish websites. My main goal is to combine clean code with appealing design to make the user experience enjoyable.">
-                    Hi! My name is <strong>Ivan Salej</strong>, I am a beginner web developer passionate...
-                </p>
-                <p data-lang-uk="Зараз я вивчаю <strong>HTML</strong> та <strong>CSS</strong> і поступово переходжу до <strong>JavaScript</strong>. У майбутньому я планую працювати як <strong>фрилансер</strong>, створюючи унікальні сайти та допомагаючи людям презентувати свої бренди."
-                   data-lang-en="Currently, I am learning <strong>HTML</strong> and <strong>CSS</strong> and gradually moving towards <strong>JavaScript</strong>. In the future, I aim to work as a <strong>freelancer</strong>, building unique websites and helping people showcase their brands.">
-                    Currently, I am learning <strong>HTML</strong> and <strong>CSS</strong>...
-                </p>
-                <div class="cta-buttons">
-                    <a href="projects.html" class="btn btn-primary" data-lang-uk="Мої проєкти" data-lang-en="My Projects">
-                        <i class="fa-solid fa-laptop-code"></i> My Projects
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary" data-lang-uk="Зв’язатися зі мною" data-lang-en="Contact Me">
-                        <i class="fa-solid fa-envelope"></i> Contact Me
-                    </a>
-                </div>
-            </div>
-
-            <div class="profile-container">
-                <div class="border-container">
-                    <div class="border-outer"></div>
-                    <div class="border-middle"></div>
-                    <div class="border-inner"></div>
-                    <div class="pulse-ring"></div>
-                    <div class="pulse-ring"></div>
-                    <div class="pulse-ring"></div>
-                </div>
-                <img src="images/profile.png" alt="Ivan Salej" class="profile-img">
-            </div>
-        </section>
-
-        <!-- SKILLS SECTION -->
-        <section class="skills-section" style="max-width: 1200px; margin: 80px auto; padding: 0 40px;">
-            <h2 style="text-align:center; margin-bottom:40px;" data-lang-uk="Навички" data-lang-en="Skills">Skills</h2>
-            <div class="skills-container" style="display:flex; justify-content:center; flex-wrap:wrap; gap:40px;">
-                <div class="skill-card" style="text-align:center; width:120px;">
-                    <i class="fab fa-html5" style="font-size:3rem; color:#e34f26;"></i>
-                    <p data-lang-uk="HTML" data-lang-en="HTML">HTML</p>
-                </div>
-                <div class="skill-card" style="text-align:center; width:120px;">
-                    <i class="fab fa-css3-alt" style="font-size:3rem; color:#1572b6;"></i>
-                    <p data-lang-uk="CSS" data-lang-en="CSS">CSS</p>
-                </div>
-                <div class="skill-card" style="text-align:center; width:120px;">
-                    <i class="fab fa-js-square" style="font-size:3rem; color:#f7df1e;"></i>
-                    <p data-lang-uk="JavaScript" data-lang-en="JavaScript">JavaScript</p>
-                </div>
-                <div class="skill-card" style="text-align:center; width:120px;">
-                    <i class="fab fa-github" style="font-size:3rem; color:#333;"></i>
-                    <p data-lang-uk="GitHub" data-lang-en="GitHub">GitHub</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__inner">
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/salei.ivan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="http://www.tiktok.com/@ivansalei1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-            <p data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">&copy; 2025 Ivan Salei. All rights reserved.</p>
+    <!-- SKILLS SECTION -->
+    <section class="skills-section" style="max-width: 1200px; margin: 80px auto; padding: 0 40px;">
+      <h2 style="text-align:center; margin-bottom:40px;" data-lang-uk="Навички" data-lang-en="Skills">Skills</h2>
+      <div class="skills-container" style="display:flex; justify-content:center; flex-wrap:wrap; gap:40px;">
+        <div class="skill-card" style="text-align:center; width:120px;">
+          <i class="fab fa-html5" style="font-size:3rem; color:#e34f26;"></i>
+          <p data-lang-uk="HTML" data-lang-en="HTML">HTML</p>
         </div>
-    </footer>
+        <div class="skill-card" style="text-align:center; width:120px;">
+          <i class="fab fa-css3-alt" style="font-size:3rem; color:#1572b6;"></i>
+          <p data-lang-uk="CSS" data-lang-en="CSS">CSS</p>
+        </div>
+        <div class="skill-card" style="text-align:center; width:120px;">
+          <i class="fab fa-js-square" style="font-size:3rem; color:#f7df1e;"></i>
+          <p data-lang-uk="JavaScript" data-lang-en="JavaScript">JavaScript</p>
+        </div>
+        <div class="skill-card" style="text-align:center; width:120px;">
+          <i class="fab fa-github" style="font-size:3rem; color:#333;"></i>
+          <p data-lang-uk="GitHub" data-lang-en="GitHub">GitHub</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- LANGUAGE SWITCH SCRIPT -->
-    <script>
-        const ukBtn = document.getElementById("uk-btn");
-        const enBtn = document.getElementById("en-btn");
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/salei.ivan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="http://www.tiktok.com/@ivansalei1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <p data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">&copy; 2025 Ivan Salei. All rights
+        reserved.</p>
+    </div>
+  </footer>
 
-        function setLanguage(lang) {
-            document.querySelectorAll("[data-lang-uk]").forEach(el => {
-                el.innerHTML = lang === "uk" ? el.dataset.langUk : el.dataset.langEn;
-            });
-            localStorage.setItem("language", lang);
-        }
-
-        ukBtn.addEventListener("click", () => setLanguage("uk"));
-        enBtn.addEventListener("click", () => setLanguage("en"));
-
-        // Set language on page load
-        const savedLang = localStorage.getItem("language") || "en";
-        setLanguage(savedLang);
-    </script>
 </body>
-
 </html>

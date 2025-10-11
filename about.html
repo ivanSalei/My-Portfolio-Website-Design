@@ -7,48 +7,66 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/scripts/scripts.js" type="module" defer></script>
 </head>
 
 <body>
   <!-- HEADER -->
   <header>
-    <a href="index.html" class="logo">
-      <i class="fa-solid fa-code logo-icon"></i>
-      <span class="logo-text">IvanSalej</span>
-    </a>
+        <a class="logo" href="#">
+            <i class="fa-solid fa-code"></i>
+            <span class="logo-text">Ivan Salei</span>
+        </a>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+                <li>
+                    <a data-lang-uk="Головна" data-lang-en="Home"href="index.html">Home</a>
+                </li>
+                <li>
+                    <a data-lang-uk="Про мене" data-lang-en="About" href="about.html">About</a>
+                </li>
+                <li>
+                    <a data-lang-uk="Проекти" data-lang-en="Projects" href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a data-lang-uk="Скіли" data-lang-en="Skills" href="skills.html">Skills</a>
+                </li>
+                <li>
+                    <a data-lang-uk="Контакти" data-lang-en="Contact" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- LANGUAGE TOGGLE -->
+        <div class="lang-toggle" id="lang-toggle">
+            <button id="uk-btn">UK</button>
+            <button id="en-btn">EN</button>
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html" data-lang-uk="Головна" data-lang-en="Home">Головна</a></li>
-        <li><a href="about.html" class="active" data-lang-uk="Про мене" data-lang-en="About Me">Про мене</a></li>
-        <li><a href="projects.html" data-lang-uk="Проєкти" data-lang-en="Projects">Проєкти</a></li>
-        <li><a href="contact.html" data-lang-uk="Контакти" data-lang-en="Contact">Контакти</a></li>
-      </ul>
-    </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </div>
 
-    <!-- LANGUAGE TOGGLE -->
-    <div class="lang-toggle" id="lang-toggle">
-      <button id="uk-btn">UK</button>
-      <button id="en-btn">EN</button>
-    </div>
-
-    <div class="theme-toggle" id="theme-toggle">
-      <i class="fa-solid fa-sun"></i>
-    </div>
-  </header>
+    </header>
 
   <!-- MAIN CONTENT -->
   <main class="about-section">
     <section class="hero">
       <div class="content">
         <h1 data-lang-uk="Про мене" data-lang-en="About Me">Про мене</h1>
-        <h2 data-lang-uk="Веб-розробник із Закарпаття" data-lang-en="Web Developer from Zakarpattia">
-          Веб-розробник із Закарпаття
+        <h2 data-lang-uk="Веб-розробник" data-lang-en="Web Developer ">
+          Веб-розробник
         </h2>
-        <p data-lang-uk="Привіт! Мене звати Ivan Salej. Я починаючий веб-розробник..." 
-           data-lang-en="Hi! My name is Ivan Salej. I am a beginner web developer...">
-          Привіт! Мене звати Ivan Salej. Я починаючий веб-розробник...
-        </p>
+        <p 
+  data-lang-uk="Привіт! Мене звати Іван Салей. Я починаючий веб-розробник, який прагне створювати сучасні, зручні та естетичні вебсайти. Мені подобається поєднувати логіку та дизайн, перетворюючи ідеї на живі інтерфейси. Я зосереджуюсь на фронтенд-розробці — працюю з HTML, CSS і поступово вивчаю JavaScript, щоб робити сайти більш динамічними та інтерактивними. Моя мета — стати професіоналом, який не просто пише код, а створює вебдосвід, який надихає та допомагає людям." 
+  
+  data-lang-en="Hi! My name is Ivan Salei. I’m a beginner web developer passionate about creating modern, user-friendly, and visually appealing websites. I enjoy blending logic with design, turning ideas into functional and interactive interfaces. I focus on front-end development — working with HTML, CSS, and gradually learning JavaScript to make my projects more dynamic and engaging. My goal is to become a professional who doesn’t just write code but builds meaningful web experiences that inspire and help people.">
+  
+  Привіт! Мене звати Ivan Salej. Я починаючий веб-розробник, який прагне створювати сучасні, зручні та естетичні вебсайти. Мені подобається поєднувати логіку та дизайн, перетворюючи ідеї на живі інтерфейси. Я зосереджуюсь на фронтенд-розробці — працюю з HTML, CSS і поступово вивчаю JavaScript, щоб робити сайти більш динамічними та інтерактивними. Моя мета — стати професіоналом, який не просто пише код, а створює вебдосвід, який надихає та допомагає людям.
+</p>
+
         <div class="cta-buttons">
           <a href="projects.html" class="btn btn-primary" 
              data-lang-uk="Мої проєкти" data-lang-en="My Projects">Мої проєкти</a>
@@ -105,34 +123,6 @@
         <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-  </footer>
-
-  <!-- LANGUAGE SWITCH SCRIPT -->
-  <script>
-    const ukBtn = document.getElementById("uk-btn");
-    const enBtn = document.getElementById("en-btn");
-
-    function setLanguage(lang) {
-      document.querySelectorAll("[data-lang-uk]").forEach(el => {
-        el.textContent = lang === "uk" ? el.dataset.langUk : el.dataset.langEn;
-      });
-    }
-
-    ukBtn.addEventListener("click", () => setLanguage("uk"));
-    enBtn.addEventListener("click", () => setLanguage("en"));
-  </script>
-
-  <!-- THEME TOGGLE SCRIPT -->
-  <script>
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const icon = themeToggle.querySelector("i");
-
-    themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light");
-      icon.classList.toggle("fa-sun");
-      icon.classList.toggle("fa-moon");
-    });
-  </script>
+  </footer>  
 </body>
 </html>

@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    
+
 
     const toggle = document.querySelector('.theme-toggle');
     const icon = toggle.querySelector('i');
@@ -106,5 +106,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    
+
+   const ukBtn = document.getElementById("uk-btn");
+const enBtn = document.getElementById("en-btn");
+
+function setLanguage(lang) {
+  // Змінюємо текст на сторінці
+  document.querySelectorAll("[data-lang-uk]").forEach(el => {
+    el.textContent = lang === "uk" ? el.dataset.langUk : el.dataset.langEn;
+  });
+
+  // Підсвічуємо активну кнопку
+  ukBtn.classList.toggle("active", lang === "uk");
+  enBtn.classList.toggle("active", lang === "en");
+
+  // Зберігаємо вибір у localStorage
+  localStorage.setItem("lang", lang);
+}
+
+// При завантаженні сторінки — встановлюємо попередню мову або "uk"
+const savedLang = localStorage.getItem("lang") || "uk";
+setLanguage(savedLang);
+
+// Обробники кліку
+ukBtn.addEventListener("click", () => setLanguage("uk"));
+enBtn.addEventListener("click", () => setLanguage("en"));
+
+
+
 });
