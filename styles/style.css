@@ -75,13 +75,13 @@ main {
 
 /* Підтримка світлої теми */
 body.light .lang-toggle button {
-  color: #1a1a1a;
-  border-color: #1a1a1a;
+  color: var(--color-accent)
+  border-color: var(var(--color-accent));
 }
 
 body.light .lang-toggle button:hover,
 body.light .lang-toggle button.active {
-  background-color: #1a1a1a;
+  background-color: var(--color-accent);
   color: #fff;
 }
 
