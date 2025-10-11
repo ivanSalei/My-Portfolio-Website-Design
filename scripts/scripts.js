@@ -79,4 +79,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    
+
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = toggle.querySelector('i');
+
+    // Завантажуємо тему з localStorage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
+        document.body.classList.add('light');
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+        const isLight = document.body.classList.contains('light');
+
+        // Змінюємо іконку
+        if (isLight) {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        } else {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });
