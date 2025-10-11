@@ -27,22 +27,28 @@
             </div>
             <ul>
                 <li>
-                    <a href="#home">Home</a>
+                    <a data-lang-uk="Головна." data-lang-en="Home"href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a data-lang-uk="Про мене" data-lang-en="About" href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a data-lang-uk="Проекти" data-lang-en="Projects" href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="skills.html">Skills</a>
+                    <a data-lang-uk="Скіли" data-lang-en="Skills" href="skills.html">Skills</a>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a data-lang-uk="Контакти" data-lang-en="Contact" href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
+        <!-- LANGUAGE TOGGLE -->
+        <div class="lang-toggle" id="lang-toggle">
+            <button id="uk-btn">UK</button>
+            <button id="en-btn">EN</button>
+        </div>
+
         <div class="theme-toggle">
             <i class="fas fa-sun"></i>
         </div>
@@ -52,20 +58,23 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="content">
-                <h1>Ivan Salei</h1>
-                <h2>Junior <span class="typing-text">Frontend Developer</span></h2>
-                <p>
-                    I create responsive, user-friendly web experiences with cutting-edge technology. With over 7 years
-                    of
-                    experience in frontend development, specialize in turning complex problems into simple, beautiful
-                    designs.
+                <h1 data-lang-uk="Ivan Salei" data-lang-en="Ivan Salei">Ivan Salei</h1>
+                <h2 data-lang-uk="Молодший фронтенд-розробник" data-lang-en="Junior Frontend Developer">
+                    <span class="typing-text" data-lang-uk="Фронтенд розробник"
+                        data-lang-en="Frontend Developer">Frontend Developer</span>
+                </h2>
+                <p data-lang-uk="Я створюю адаптивні та зручні веб-додатки з використанням сучасних технологій."
+                    data-lang-en="I create responsive, user-friendly web experiences with cutting-edge technology.">
+                    I create responsive, user-friendly web experiences with cutting-edge technology.
                 </p>
 
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projects" class="btn btn-primary" data-lang-uk="Переглянути проєкти"
+                        data-lang-en="View Projects">
                         <i class="fas fa-code"></i> View Projects
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary" data-lang-uk="Зв’язатися зі мною"
+                        data-lang-en="Contact Me">
                         <i class="fa-solid fa-paper-plane"></i> Contact Me
                     </a>
                 </div>
@@ -96,9 +105,28 @@
                         class="fa-brands fa-instagram"></i></a>
                 <a href="http://www.tiktok.com/@ivansalei1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-            <p>&copy; 2025 Ivan Salei. All rights reserved.</p>
+           <p data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">&copy; 2025 Ivan Salei. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+    const ukBtn = document.getElementById("uk-btn");
+    const enBtn = document.getElementById("en-btn");
+
+    function setLanguage(lang) {
+        document.querySelectorAll("[data-lang-uk]").forEach(el => {
+            el.textContent = lang === "uk" ? el.dataset.langUk : el.dataset.langEn;
+        });
+        localStorage.setItem("language", lang);
+    }
+
+    ukBtn.addEventListener("click", () => setLanguage("uk"));
+    enBtn.addEventListener("click", () => setLanguage("en"));
+
+    // Зберігаємо мову після перезавантаження
+    const savedLang = localStorage.getItem("language") || "en";
+    setLanguage(savedLang);
+</script>
+
 </body>
 
 </html>
