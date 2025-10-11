@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Ivan Salej</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-code logo-icon"></i>
+      <span class="logo-text">IvanSalej</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-lang-uk="Головна" data-lang-en="Home">Головна</a></li>
+        <li><a href="about.html" class="active" data-lang-uk="Про мене" data-lang-en="About Me">Про мене</a></li>
+        <li><a href="projects.html" data-lang-uk="Проєкти" data-lang-en="Projects">Проєкти</a></li>
+        <li><a href="contact.html" data-lang-uk="Контакти" data-lang-en="Contact">Контакти</a></li>
+      </ul>
+    </nav>
+
+    <!-- LANGUAGE TOGGLE -->
+    <div class="lang-toggle" id="lang-toggle">
+      <button id="uk-btn">UK</button>
+      <button id="en-btn">EN</button>
+    </div>
+
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fa-solid fa-sun"></i>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="about-section">
+    <section class="hero">
+      <div class="content">
+        <h1 data-lang-uk="Про мене" data-lang-en="About Me">Про мене</h1>
+        <h2 data-lang-uk="Веб-розробник із Закарпаття" data-lang-en="Web Developer from Zakarpattia">
+          Веб-розробник із Закарпаття
+        </h2>
+        <p data-lang-uk="Привіт! Мене звати Ivan Salej. Я починаючий веб-розробник..." 
+           data-lang-en="Hi! My name is Ivan Salej. I am a beginner web developer...">
+          Привіт! Мене звати Ivan Salej. Я починаючий веб-розробник...
+        </p>
+        <div class="cta-buttons">
+          <a href="projects.html" class="btn btn-primary" 
+             data-lang-uk="Мої проєкти" data-lang-en="My Projects">Мої проєкти</a>
+          <a href="contact.html" class="btn btn-secondary" 
+             data-lang-uk="Зв’язатися зі мною" data-lang-en="Contact Me">Зв’язатися зі мною</a>
+        </div>
+      </div>
+
+      <!-- ПРОФІЛЬНА ФОТО -->
+      <div class="profile-container">
+        <div class="border-container">
+          <div class="border-outer"></div>
+          <div class="border-middle"></div>
+          <div class="border-inner"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+        </div>
+        <img src="images/profile.png" alt="Ivan Salej" class="profile-img">
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section">
+      <h2 data-lang-uk="Навички" data-lang-en="Skills">Навички</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fab fa-html5" style="color:#e34f26;"></i>
+          <p data-lang-uk="HTML" data-lang-en="HTML">HTML</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt" style="color:#1572b6;"></i>
+          <p data-lang-uk="CSS" data-lang-en="CSS">CSS</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js-square" style="color:#f7df1e;"></i>
+          <p data-lang-uk="JavaScript" data-lang-en="JavaScript">JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-github" style="color:#333;"></i>
+          <p data-lang-uk="GitHub" data-lang-en="GitHub">GitHub</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__inner">
+      <p data-lang-uk="Всі права захищені." data-lang-en="All rights reserved.">Всі права захищені.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LANGUAGE SWITCH SCRIPT -->
+  <script>
+    const ukBtn = document.getElementById("uk-btn");
+    const enBtn = document.getElementById("en-btn");
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-lang-uk]").forEach(el => {
+        el.textContent = lang === "uk" ? el.dataset.langUk : el.dataset.langEn;
+      });
+    }
+
+    ukBtn.addEventListener("click", () => setLanguage("uk"));
+    enBtn.addEventListener("click", () => setLanguage("en"));
+  </script>
+
+  <!-- THEME TOGGLE SCRIPT -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const icon = themeToggle.querySelector("i");
+
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("light");
+      icon.classList.toggle("fa-sun");
+      icon.classList.toggle("fa-moon");
+    });
+  </script>
+</body>
+</html>
